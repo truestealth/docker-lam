@@ -12,3 +12,5 @@ RUN wget http://ftp.debian.org/debian/pool/main/l/ldap-account-manager/ldap-acco
 
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
+
+CMD /run.sh
