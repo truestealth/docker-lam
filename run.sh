@@ -10,6 +10,7 @@ update-ca-certificates
 
 chown -R www-data:www-data /var/lib/ldap-account-manager/config/
 
-sed 's,^\([^#]*\)DocumentRoot.*$,\1DocumentRoot /usr/share/ldap-account-manager/,' /etc/apache2/sites-available/000-default.conf
+sed -i 's,^\([^#]*\)DocumentRoot.*$,\1DocumentRoot /usr/share/ldap-account-manager/,' \
+       /etc/apache2/sites-available/000-default.conf
 
 apachectl -DFOREGROUND
