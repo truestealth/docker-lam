@@ -10,6 +10,8 @@ RUN wget http://ftp.debian.org/debian/pool/main/l/ldap-account-manager/ldap-acco
     rm ldap-account-manager_5.7-1_all.deb && \
     apt-get update &&  apt-get -fy install && rm -r /var/lib/apt/lists/*
 
+COPY lam.conf.default /var/lib/ldap-account-manager/config/
+
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
 
